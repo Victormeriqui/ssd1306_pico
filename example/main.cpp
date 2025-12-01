@@ -1,7 +1,7 @@
-#include "../src/config.hpp"
-#include "../src/ssd1306_pico.hpp"
 #include "etl/string.h"
 #include "pico/stdlib.h"
+#include "ssd1306_config.hpp"
+#include "ssd1306_pico.hpp"
 
 using namespace ssd1306_pico;
 

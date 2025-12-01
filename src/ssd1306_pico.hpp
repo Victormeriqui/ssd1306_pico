@@ -1,10 +1,10 @@
 #pragma once
 
 #include "bitmap.hpp"
-#include "config.hpp"
 #include "display_controller.hpp"
 #include "font.hpp"
 #include "framebuffer.hpp"
+#include "ssd1306_config.hpp"
 
 #include "etl/delegate.h"
 #include "etl/string.h"

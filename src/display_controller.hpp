@@ -1,8 +1,8 @@
 #pragma once
 
-#include "config.hpp"
 #include "framebuffer.hpp"
 #include "register_defines.hpp"
+#include "ssd1306_config.hpp"
 
 #include "hardware/i2c.h"
 #include "pico/stdlib.h"
