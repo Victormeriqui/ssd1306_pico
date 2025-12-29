@@ -54,6 +54,7 @@ namespace ssd1306_pico
 
         void set_font_size(FontSize size);
         [[nodiscard]] FontSize get_font_size() const;
+        const Font& get_font() const;
 
         void draw_char(uint8_t x, uint8_t y, char chr);
         void draw_string(uint8_t x, uint8_t y, etl::string_view str);
@@ -65,9 +66,6 @@ namespace ssd1306_pico
         void erase_rect(uint8_t x, uint8_t y, uint8_t width, uint8_t height);
 
         void blink_section(uint8_t blink_frequency, uint8_t blink_period, etl::delegate<void()> filled_draw_call, etl::delegate<void()> unfilled_draw_call);
-
-    private:
-        const Font& _get_font() const;
 
     private:
         DisplayController<128, 64> _display_controller;

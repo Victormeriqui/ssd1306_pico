@@ -171,7 +171,7 @@ namespace ssd1306_pico
         return _current_font_size;
     }
 
-    const Font& SSD1306::_get_font() const
+    const Font& SSD1306::get_font() const
     {
         switch (_current_font_size)
         {
