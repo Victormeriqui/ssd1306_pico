@@ -188,7 +188,7 @@ namespace ssd1306_pico
 
     void SSD1306::draw_char(uint8_t x, uint8_t y, char chr)
     {
-        const Font& cur_font = _get_font();
+        const Font& cur_font = get_font();
         const Bitmap& bitmap = cur_font.get_font_map();
 
         chr = chr - ' ' + cur_font.get_glyph_offset();
@@ -207,7 +207,7 @@ namespace ssd1306_pico
 
     void SSD1306::draw_string(uint8_t x, uint8_t y, etl::string_view str)
     {
-        const Font& cur_font = _get_font();
+        const Font& cur_font = get_font();
 
         uint8_t glyph_w = cur_font.get_glyph_width();
         uint8_t glyph_h = cur_font.get_glyph_height();
@@ -230,7 +230,7 @@ namespace ssd1306_pico
 
     void SSD1306::draw_string_centered(uint8_t x, uint8_t y, etl::string_view str)
     {
-        const Font& cur_font = _get_font();
+        const Font& cur_font = get_font();
 
         uint8_t glyph_w = cur_font.get_glyph_width();
         uint8_t glyph_h = cur_font.get_glyph_height();
@@ -242,7 +242,7 @@ namespace ssd1306_pico
 
     void SSD1306::draw_string(uint8_t x, uint8_t y, int32_t num)
     {
-        const Font& cur_font = _get_font();
+        const Font& cur_font = get_font();
 
         uint8_t glyph_w = cur_font.get_glyph_width();
         uint8_t glyph_h = cur_font.get_glyph_height();
@@ -273,7 +273,7 @@ namespace ssd1306_pico
 
     void SSD1306::draw_string_centered(uint8_t x, uint8_t y, int32_t num)
     {
-        const Font& cur_font = _get_font();
+        const Font& cur_font = get_font();
 
         uint8_t glyph_w = cur_font.get_glyph_width();
         uint8_t glyph_h = cur_font.get_glyph_height();
@@ -288,7 +288,7 @@ namespace ssd1306_pico
         static etl::set<char, 10> SPECIAL_CHARS = {'%', '\n'};
         static etl::string<MAX_FORMATTED_STRING_SIZE> STR_BUFF;
 
-        const Font& cur_font = _get_font();
+        const Font& cur_font = get_font();
         uint8_t glyph_w      = cur_font.get_glyph_width();
         uint8_t glyph_h      = cur_font.get_glyph_height();
 
